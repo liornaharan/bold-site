@@ -848,7 +848,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .section-head.center{text-align:center;}
 
 </style>
-<style>section[id]{scroll-margin-top:90px;}</style>
+<style>section[id]{scroll-margin-top:90px;}body.on-chat .cookie-banner{top:0;bottom:auto;padding:10px 14px;border-top:0;border-bottom:1px solid rgba(164,141,101,0.3);}body.on-chat .announce-bar{display:none;}body.on-chat .cookie-banner-inner{gap:8px;}body.on-chat .cookie-banner .txt p{font-size:0.78rem;line-height:1.4;}body.on-chat .cookie-btn{padding:7px 14px;font-size:0.8rem;}</style>
 </head>
 <body>
 <div class="announce-bar" role="region" aria-label="הודעה">
@@ -1234,7 +1234,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 </div>
 <div class="spa-page" id="page-chat" data-route="chat" hidden>
-<section class="section" id="main-content" style="padding:36px 0 60px;">
+<section class="section" id="main-content" style="padding:16px 0 48px;">
   <div class="container" style="max-width:520px;padding:0 14px;">
     <div data-bold-chat="hero"></div>
   </div>
@@ -2932,6 +2932,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var t = el.getAttribute('data-route');
     var titles = {"chat": "שיחה קצרה עם ליאור | בולד, תכנון פנסיוני ותכנון פרישה", "index": "בולד | תכנון פרישה ותכנון פנסיוני", "about": "אודות | בולד, תכנון פנסיוני ותכנון פרישה", "accessibility": "הצהרת נגישות | בולד, תכנון פנסיוני ותכנון פרישה", "article-amendment-190": "תיקון 190: מה זה ולמי זה מתאים | בולד, תכנון פנסיוני ותכנון פרישה", "article-budgetary-pension": "פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת | בולד, תכנון פנסיוני ותכנון פרישה", "article-pension-tax": "מס על משיכת כספי פנסיה: מה שחשוב לדעת לפני שמושכים | בולד, תכנון פנסיוני ותכנון פרישה", "article-qualifying-recognized-pension": "קצבה מזכה וקצבה מוכרת: מה ההבדל ולמה הוא חשוב | בולד, תכנון פנסיוני ותכנון פרישה", "article-retirement-mistakes": "5 טעויות נפוצות בתכנון פרישה (ואיך להימנע מהן) | בולד, תכנון פנסיוני ותכנון פרישה", "article-rights-fixation": "קיבוע זכויות: מה זה ולמה זה יכול לחסוך לכם עשרות אלפי שקלים | בולד, תכנון פנסיוני ותכנון פרישה", "article-severance-tax": "מיסוי מענקי פרישה בסיום עבודה: מה חייב במס ומה פטור | בולד, תכנון פנסיוני ותכנון פרישה", "article-vacation-tax-spread": "פריסת מס על פדיון ימי חופשה: איך מפחיתים את נטל המס | בולד, תכנון פנסיוני ותכנון פרישה", "articles": "מאמרים | בולד, תכנון פנסיוני ותכנון פרישה", "cookies": "מדיניות עוגיות | בולד, תכנון פנסיוני ותכנון פרישה", "full-disclosure": "גילוי נאות | בולד, תכנון פנסיוני ותכנון פרישה", "service-alternative-investments": "השקעות אלטרנטיביות | בולד, תכנון פנסיוני ותכנון פרישה", "service-financial-planning": "תכנון פיננסי וניהול הון | בולד, תכנון פנסיוני ותכנון פרישה", "service-insurance": "ביטוח חיים ובריאות | בולד, תכנון פנסיוני ותכנון פרישה", "service-investment-portfolio": "ניהול תיקי השקעות | בולד, תכנון פנסיוני ותכנון פרישה", "service-retirement-planning": "תכנון פרישה | בולד, תכנון פנסיוני ותכנון פרישה", "service-seminars": "הרצאות וימי עיון | בולד, תכנון פנסיוני ותכנון פרישה", "services": "שירותים | בולד, תכנון פנסיוני ותכנון פרישה"};
     document.title = titles[t] || document.title;
+    document.body.classList.toggle('on-chat', el.id === 'page-chat');
     var anchor = (el.id !== 'page-' + id) ? document.getElementById(id) : null;
     if (anchor && el.contains(anchor)) { anchor.scrollIntoView(); } else { window.scrollTo(0,0); }
   }
@@ -2957,7 +2958,7 @@ document.addEventListener('DOMContentLoaded', function () {
 .bchat-name{font-size:1.05rem;font-weight:800}
 .bchat-role{font-size:.82rem;color:rgba(255,255,255,.75)}
 .bchat-offer{display:none}
-.bchat--hero{height:640px}
+.bchat--hero{height:min(640px,calc(100dvh - 150px));min-height:440px}
 .bchat--hero:not(.is-started) .bchat-top{flex-direction:column;text-align:center;padding:22px 16px 18px;gap:8px}
 .bchat--hero:not(.is-started) .bchat-top img{width:108px;height:108px;border-width:3px}
 .bchat--hero:not(.is-started) .bchat-name{font-size:1.4rem}
