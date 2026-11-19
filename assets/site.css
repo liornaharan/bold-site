@@ -401,8 +401,8 @@
   content:"";
   position:absolute; top:0; left:-120%; width:120%; height:100%;
   background:linear-gradient(100deg, transparent 20%, rgba(253,185,39,0.55) 42%, rgba(255,248,225,0.95) 50%, rgba(253,185,39,0.55) 58%, transparent 80%);
-  -webkit-mask-image:url("logo-light.png");
-  mask-image:url("logo-light.png");
+  -webkit-mask-image:url("004c7f43d4.png");
+  mask-image:url("004c7f43d4.png");
   -webkit-mask-size:contain; mask-size:contain;
   -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
   -webkit-mask-position:center; mask-position:center;
@@ -839,4 +839,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 
 section[id]{scroll-margin-top:90px;}body.on-chat .cookie-banner{top:0;bottom:auto;padding:10px 14px;border-top:0;border-bottom:1px solid rgba(201,162,75,0.3);}body.on-chat .announce-bar{display:none;}body.on-chat .cookie-banner-inner{gap:8px;}body.on-chat .cookie-banner .txt p{font-size:0.78rem;line-height:1.4;}body.on-chat .cookie-btn{padding:7px 14px;font-size:0.8rem;}
-.btn-gold,.nav-cta,.cookie-btn-accept,.capture-card button,.footer-wa{background:#FDB927;color:#0E0B12;}.btn-gold:hover,.nav-cta:hover,.cookie-btn-accept:hover,.capture-card button:hover,.footer-wa:hover{background:#C9A24B;color:#0E0B12;}.bchat .bchat-chip.main,.bchat .bchat-field button{background:#FDB927;border-color:#FDB927;color:#0E0B12;}.site-footer,footer{background:#0E0B12;}.why-item .num,.value-item .num{color:#735514;}
+.btn-gold,.nav-cta,.cookie-btn-accept,.capture-card button,.footer-wa{background:#FDB927;color:#0E0B12;}.btn-gold:hover,.nav-cta:hover,.cookie-btn-accept:hover,.capture-card button:hover,.footer-wa:hover{background:#C9A24B;color:#0E0B12;}.bchat .bchat-chip.main,.bchat .bchat-field button{background:#FDB927;border-color:#FDB927;color:#0E0B12;}.site-footer,footer{background:#0E0B12;}.why-item .num,.value-item .num{color:#735514;}.founder-section .eyebrow,.faq-section .eyebrow{color:#735514;}.partners-note a{color:#735514 !important;}.calc-btn,.capture-card a[style*='background:var(--gold)']{background:#FDB927 !important;color:#0E0B12 !important;}
+.skip-link{position:absolute;top:-60px;right:12px;z-index:1000;background:#FDB927;color:#0E0B12;padding:10px 18px;border-radius:6px;font-weight:700;}.skip-link:focus{top:12px;}

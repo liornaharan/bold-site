@@ -15,15 +15,18 @@
 <meta property="og:url" content="https://liornaharan.github.io/bold-site/about/">
 <meta property="og:image" content="https://liornaharan.github.io/bold-site/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AboutPage", "url": "https://liornaharan.github.io/bold-site/about/", "name": "אודות | ליאור נהרן, BOLD", "mainEntity": {"@id": "https://liornaharan.github.io/bold-site/#lior"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://liornaharan.github.io/bold-site/"}, {"@type": "ListItem", "position": 2, "name": "ליאור נהרן", "item": "https://liornaharan.github.io/bold-site/about/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
-<link rel="stylesheet" href="../assets/site.css?v=db949f34">
+
+<link rel="stylesheet" href="../assets/site.css?v=bf51f82c">
 </head>
 <body>
+<a class="skip-link" href="#main-content">דלג לתוכן</a>
 <div class="announce-bar" role="region" aria-label="הודעה">
   <div class="container announce-inner">
     <span>לקראת פרישה? מתחילים בתמונת מצב אישית ומקיפה של הכסף שלכם.</span>
@@ -44,7 +47,7 @@
         <li><a href="../#contact">יצירת קשר</a></li>
       </ul>
     </nav>
-    <button class="burger">☰</button>
+    <button class="burger" type="button" aria-label="תפריט ניווט" aria-expanded="false" aria-controls="mainNav">☰</button>
   </div>
 </header>
 <main id="main-content">
@@ -95,7 +98,7 @@
 <section class="section" style="padding-top:0;">
   <div class="container" style="max-width:720px;">
     <div class="photo-banner">
-      <img src="../assets/098e816932.jpg" alt="שותפות ואמון בליווי האישי">
+      <img src="../assets/d8787d6e0d.jpg" alt="שותפות ואמון בליווי האישי">
     </div>
   </div>
 </section>
@@ -224,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      btn.closest('.faq-item').classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.closest('.faq-item').classList.toggle('open') ? 'true' : 'false');
     });
   });
 

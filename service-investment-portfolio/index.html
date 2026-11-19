@@ -15,15 +15,18 @@
 <meta property="og:url" content="https://liornaharan.github.io/bold-site/service-investment-portfolio/">
 <meta property="og:image" content="https://liornaharan.github.io/bold-site/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "ניהול תיקי השקעות", "serviceType": "ניהול תיקי השקעות", "description": "מי שצבר הון בקרנות השתלמות, קופות גמל להשקעה או תיק השקעות עצמאי יכול לבדוק האם ההרכב וההקצאה הנוכחיים תואמים את מטרותיו, את רמת הסיכון הרצויה ואת דמי...", "url": "https://liornaharan.github.io/bold-site/service-investment-portfolio/", "provider": {"@id": "https://liornaharan.github.io/bold-site/#business"}, "areaServed": "IL"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://liornaharan.github.io/bold-site/"}, {"@type": "ListItem", "position": 2, "name": "שירותים", "item": "https://liornaharan.github.io/bold-site/services/"}, {"@type": "ListItem", "position": 3, "name": "ניהול תיקי השקעות", "item": "https://liornaharan.github.io/bold-site/service-investment-portfolio/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
-<link rel="stylesheet" href="../assets/site.css?v=db949f34">
+
+<link rel="stylesheet" href="../assets/site.css?v=bf51f82c">
 </head>
 <body>
+<a class="skip-link" href="#main-content">דלג לתוכן</a>
 <div class="announce-bar" role="region" aria-label="הודעה">
   <div class="container announce-inner">
     <span>לקראת פרישה? מתחילים בתמונת מצב אישית ומקיפה של הכסף שלכם.</span>
@@ -44,7 +47,7 @@
         <li><a href="../#contact">יצירת קשר</a></li>
       </ul>
     </nav>
-    <button class="burger">☰</button>
+    <button class="burger" type="button" aria-label="תפריט ניווט" aria-expanded="false" aria-controls="mainNav">☰</button>
   </div>
 </header>
 <main id="main-content">
@@ -78,7 +81,7 @@
 <section class="section" style="padding-bottom:0;">
   <div class="container">
     <div class="photo-banner">
-      <img src="../assets/342ede994e.jpg" alt="מעקב וניתוח תיק השקעות">
+      <img src="../assets/fbd6213877.jpg" alt="מעקב וניתוח תיק השקעות">
     </div>
   </div>
 </section>
@@ -206,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      btn.closest('.faq-item').classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.closest('.faq-item').classList.toggle('open') ? 'true' : 'false');
     });
   });
 

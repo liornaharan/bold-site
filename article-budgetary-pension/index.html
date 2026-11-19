@@ -3,28 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת | ליאור נהרן, BOLD</title>
+<title>פנסיה תקציבית: מה חשוב לדעת | ליאור נהרן</title>
 <meta name="description" content="לעובדי מדינה ותיקים יש מערכת פנסיה שונה לגמרי מזו של רוב השכירים במשק. הנה איך היא מחושבת, מי זכאי לה, ואיך לבדוק את הגמלה הצפויה לכם.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://liornaharan.github.io/bold-site/article-budgetary-pension/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="BOLD">
-<meta property="og:title" content="פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת | ליאור נהרן, BOLD">
+<meta property="og:title" content="פנסיה תקציבית: מה חשוב לדעת | ליאור נהרן">
 <meta property="og:description" content="לעובדי מדינה ותיקים יש מערכת פנסיה שונה לגמרי מזו של רוב השכירים במשק. הנה איך היא מחושבת, מי זכאי לה, ואיך לבדוק את הגמלה הצפויה לכם.">
 <meta property="og:url" content="https://liornaharan.github.io/bold-site/article-budgetary-pension/">
 <meta property="og:image" content="https://liornaharan.github.io/bold-site/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת", "description": "לעובדי מדינה ותיקים יש מערכת פנסיה שונה לגמרי מזו של רוב השכירים במשק. הנה איך היא מחושבת, מי זכאי לה, ואיך לבדוק את הגמלה הצפויה לכם.", "inLanguage": "he", "mainEntityOfPage": "https://liornaharan.github.io/bold-site/article-budgetary-pension/", "image": "https://liornaharan.github.io/bold-site/og.png", "author": {"@type": "Person", "name": "ליאור נהרן", "url": "https://liornaharan.github.io/bold-site/about/"}, "publisher": {"@type": "Organization", "name": "BOLD", "url": "https://liornaharan.github.io/bold-site/"}, "datePublished": "2026-08-06"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת", "description": "לעובדי מדינה ותיקים יש מערכת פנסיה שונה לגמרי מזו של רוב השכירים במשק. הנה איך היא מחושבת, מי זכאי לה, ואיך לבדוק את הגמלה הצפויה לכם.", "inLanguage": "he", "mainEntityOfPage": "https://liornaharan.github.io/bold-site/article-budgetary-pension/", "image": "https://liornaharan.github.io/bold-site/og.png", "author": {"@id": "https://liornaharan.github.io/bold-site/#lior"}, "publisher": {"@id": "https://liornaharan.github.io/bold-site/#business"}, "datePublished": "2026-08-06"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://liornaharan.github.io/bold-site/"}, {"@type": "ListItem", "position": 2, "name": "מאמרים", "item": "https://liornaharan.github.io/bold-site/articles/"}, {"@type": "ListItem", "position": 3, "name": "פנסיה תקציבית לעובדי מדינה: איך זה עובד ומה חשוב לדעת", "item": "https://liornaharan.github.io/bold-site/article-budgetary-pension/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
-<link rel="stylesheet" href="../assets/site.css?v=db949f34">
+
+<link rel="stylesheet" href="../assets/site.css?v=bf51f82c">
 </head>
 <body>
+<a class="skip-link" href="#main-content">דלג לתוכן</a>
 <div class="announce-bar" role="region" aria-label="הודעה">
   <div class="container announce-inner">
     <span>לקראת פרישה? מתחילים בתמונת מצב אישית ומקיפה של הכסף שלכם.</span>
@@ -45,7 +47,7 @@
         <li><a href="../#contact">יצירת קשר</a></li>
       </ul>
     </nav>
-    <button class="burger">☰</button>
+    <button class="burger" type="button" aria-label="תפריט ניווט" aria-expanded="false" aria-controls="mainNav">☰</button>
   </div>
 </header>
 <main id="main-content">
@@ -197,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      btn.closest('.faq-item').classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.closest('.faq-item').classList.toggle('open') ? 'true' : 'false');
     });
   });
 

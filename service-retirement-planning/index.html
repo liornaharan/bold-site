@@ -15,15 +15,18 @@
 <meta property="og:url" content="https://liornaharan.github.io/bold-site/service-retirement-planning/">
 <meta property="og:image" content="https://liornaharan.github.io/bold-site/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "תכנון פרישה", "serviceType": "תכנון פרישה", "description": "מי שנמצא בטווח של כמה שנים לפני פרישה יכול להיעזר בבניית תוכנית מלאה שמרכזת את כל מקורות ההכנסה הצפויים, ובודקת האם הם מספיקים לשמירה על רמת החיים הרצויה...", "url": "https://liornaharan.github.io/bold-site/service-retirement-planning/", "provider": {"@id": "https://liornaharan.github.io/bold-site/#business"}, "areaServed": "IL"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://liornaharan.github.io/bold-site/"}, {"@type": "ListItem", "position": 2, "name": "שירותים", "item": "https://liornaharan.github.io/bold-site/services/"}, {"@type": "ListItem", "position": 3, "name": "תכנון פרישה", "item": "https://liornaharan.github.io/bold-site/service-retirement-planning/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
-<link rel="stylesheet" href="../assets/site.css?v=db949f34">
+
+<link rel="stylesheet" href="../assets/site.css?v=bf51f82c">
 </head>
 <body>
+<a class="skip-link" href="#main-content">דלג לתוכן</a>
 <div class="announce-bar" role="region" aria-label="הודעה">
   <div class="container announce-inner">
     <span>לקראת פרישה? מתחילים בתמונת מצב אישית ומקיפה של הכסף שלכם.</span>
@@ -44,7 +47,7 @@
         <li><a href="../#contact">יצירת קשר</a></li>
       </ul>
     </nav>
-    <button class="burger">☰</button>
+    <button class="burger" type="button" aria-label="תפריט ניווט" aria-expanded="false" aria-controls="mainNav">☰</button>
   </div>
 </header>
 <main id="main-content">
@@ -224,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      btn.closest('.faq-item').classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.closest('.faq-item').classList.toggle('open') ? 'true' : 'false');
     });
   });
 
