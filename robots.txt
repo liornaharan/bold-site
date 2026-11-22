@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://liornaharan.github.io/bold-site/sitemap.xml
+Sitemap: https://www.bold.org.il/sitemap.xml
