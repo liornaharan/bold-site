@@ -62,16 +62,18 @@
     <p>עוגיות (Cookies) הן קבצי טקסט קטנים שנשמרים בדפדפן שלכם כשאתם מבקרים באתר. הן משמשות לזכור העדפות, לשפר את חוויית הגלישה, ולעיתים לאיסוף מידע סטטיסטי על השימוש באתר.</p>
 
     <h2>אילו עוגיות האתר הזה משתמש בהן כרגע</h2>
-    <p>נכון לעכשיו, האתר משתמש בעוגיות הכרחיות בלבד, הנדרשות לתפקוד בסיסי של האתר ולזכירת ההעדפה שלכם לגבי עוגיות:</p>
+    <p>האתר משתמש בעוגיות הכרחיות, ובעוגיות שיווק רק אם אישרתם אותן בבאנר העוגיות:</p>
     <table>
       <tr><th>סוג</th><th>מטרה</th><th>תוקף</th></tr>
       <tr><td>הכרחיות</td><td>זכירת בחירת הסכמת העוגיות שלכם</td><td>שנה אחת</td></tr>
       <tr><td>גופנים (Google Fonts)</td><td>טעינת גופן האתר מ-Google</td><td>בהתאם למדיניות Google</td></tr>
+      <tr><td>שיווק (Meta Pixel), רק באישור</td><td>מדידת ביקורים באתר ומדידה שהושארו פרטים בצ'אט, כדי לשפר ולמדוד את הפרסום בפייסבוק ובאינסטגרם</td><td>עד 90 יום, בהתאם למדיניות Meta</td></tr>
     </table>
     <p>האתר משתמש גם בקישורים חיצוניים לשירותים של צד שלישי, כמו טופס יצירת קשר (Surense) ו-WhatsApp, שעשויים להציב עוגיות משלהם כשאתם עוברים אליהם. השימוש בשירותים אלה כפוף למדיניות הפרטיות שלהם.</p>
 
-    <h2>עוגיות עתידיות (כשיתווספו)</h2>
-    <p>אם בעתיד יתווספו לאתר כלים כמו Google Analytics או פיקסל שיווקי (Meta/Google Ads) לצורך מעקב וניתוח, הם ייטענו רק לאחר קבלת הסכמתכם, בהתאם לבחירה שתעשו בבאנר העוגיות.</p>
+    <h2>Meta Pixel (עוגיית שיווק)</h2>
+    <p>אם תבחרו "אישור כל העוגיות", ייטען באתר Meta Pixel, כלי של Meta (פייסבוק ואינסטגרם). הוא מדווח ל-Meta שנכנסתם לאתר, ושהשארתם פרטים בצ'אט, אם השארתם. הוא לא מעביר את השם, הטלפון או התשובות שכתבתם בצ'אט. אם תבחרו "הכרחיות בלבד", הכלי לא ייטען כלל.</p>
+    <p>אם בעתיד יתווספו כלים נוספים, כמו Google Analytics, גם הם ייטענו רק לאחר הסכמתכם.</p>
 
     <h2>איך לשלוט בעוגיות</h2>
     <div class="cookie-manage-box">
@@ -81,7 +83,7 @@
     <h2>שאלות?</h2>
     <p>לכל שאלה בנושא פרטיות ועוגיות, ניתן לפנות אלינו בטלפון 050-2035552 או במייל lior@bold.org.il.</p>
 
-    <p class="updated">מדיניות זו עודכנה לאחרונה באוגוסט 2026.</p>
+    <p class="updated">מדיניות זו עודכנה לאחרונה בנובמבר 2026.</p>
   </div>
 </section>
 
@@ -328,8 +330,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (banner) banner.classList.remove('visible');
   }
   function applyConsent(level) {
-    // Hook point: when analytics/marketing scripts are added later,
-    // load them here only if level === 'all'.
+    // Meta Pixel: loaded only after marketing consent (level === 'all').
+    if (level === 'all' && !window.fbq) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', '1668237501574325');
+      window.fbq('track', 'PageView');
+    }
     document.dispatchEvent(new CustomEvent('bold-consent-changed', { detail: { level: level } }));
   }
 

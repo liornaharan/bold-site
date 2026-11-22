@@ -75,6 +75,9 @@
     <h2>הזכויות שלכם</h2>
     <p>אתם רשאים לבקש לעיין במידע שנשמר עליכם, לתקן אותו או למחוק אותו, ולבקש שלא אפנה אליכם שוב. אפשר לפנות בטלפון 050-2035552 או במייל lior@bold.org.il</p>
 
+    <h2>מדידת פרסום (Meta Pixel)</h2>
+    <p>אם אישרתם עוגיות שיווק, האתר מדווח ל-Meta שנכנסתם לאתר ושהשארתם פרטים בצ'אט. המטרה היא למדוד ולשפר את הפרסום שלי בפייסבוק ובאינסטגרם. הפרטים עצמם (שם, טלפון ותשובות) לא מועברים ל-Meta. אם לא אישרתם עוגיות שיווק, המדידה הזו לא מתבצעת.</p>
+
     <h2>עוגיות</h2>
     <p>מידע על השימוש בעוגיות באתר נמצא ב<a href="../cookies/">מדיניות העוגיות</a>.</p>
 
@@ -325,8 +328,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (banner) banner.classList.remove('visible');
   }
   function applyConsent(level) {
-    // Hook point: when analytics/marketing scripts are added later,
-    // load them here only if level === 'all'.
+    // Meta Pixel: loaded only after marketing consent (level === 'all').
+    if (level === 'all' && !window.fbq) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', '1668237501574325');
+      window.fbq('track', 'PageView');
+    }
     document.dispatchEvent(new CustomEvent('bold-consent-changed', { detail: { level: level } }));
   }
 
