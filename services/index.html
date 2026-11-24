@@ -15,10 +15,10 @@
 <meta property="og:url" content="https://www.bold.org.il/services/">
 <meta property="og:image" content="https://www.bold.org.il/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://www.bold.org.il/"}, {"@type": "ListItem", "position": 2, "name": "ליווי מלא בכל מה שנוגע לכסף שלכם בעתיד", "item": "https://www.bold.org.il/services/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "במה שונה סוכן ביטוח פנסיוני ממי שמחזיק ברישיון נפרד?", "acceptedAnswer": {"@type": "Answer", "text": "סוכן ביטוח פנסיוני, כמו ליאור נהרן, מלווה לקוחות בתכנון פנסיוני ותכנון פרישה ומורשה לתווך מוצרים פנסיוניים וביטוחיים. מי שמחזיק ברישיון נפרד אינו מוכר מוצרים. שני המסלולים חוקיים ומוסדרים, וההבדל העיקרי הוא במבנה הרישוי."}}, {"@type": "Question", "name": "מתי כדאי להתחיל לתכנן את הפרישה?", "acceptedAnswer": {"@type": "Answer", "text": "ככל שמתחילים מוקדם יותר, יש יותר גמישות בהחלטות. בפועל, השלב הקריטי ביותר הוא כ-5 עד 10 שנים לפני מועד הפרישה המתוכנן, אז אפשר עדיין להשפיע משמעותית על גובה הקצבה ועל היבטי המיסוי."}}, {"@type": "Question", "name": "כמה עולה תהליך תכנון פרישה?", "acceptedAnswer": {"@type": "Answer", "text": "זה תלוי בהיקף התיק ובמורכבות המצב. בשיחת ההיכרות הראשונית נבין יחד את התמונה, ורק לאחר מכן תדעו בדיוק על מה מדובר, בשקיפות מלאה לפני שמתחילים."}}, {"@type": "Question", "name": "האם אתם עובדים עם קופת גמל או ביטוח פנסיה ספציפיים?", "acceptedAnswer": {"@type": "Answer", "text": "לא. הליווי הוא עצמאי ובלתי תלוי בחברת ביטוח אחת, כך שההמלצות מבוססות על מה שמתאים לכם ולא על יעדי מכירה של גוף מסוים."}}, {"@type": "Question", "name": "אני לא מתגורר בחיפה או בצפון, אפשר עדיין לקבל ליווי?", "acceptedAnswer": {"@type": "Answer", "text": "כן. הליווי ניתן פרונטלית מהמשרדים בקיבוץ גבת ובחיפה, וגם מרחוק בשיחת וידאו לכל אזור בארץ."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://www.bold.org.il/"}, {"@type": "ListItem", "position": 2, "name": "ליווי מלא בכל מה שנוגע לכסף שלכם בעתיד", "item": "https://www.bold.org.il/services/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
 
@@ -170,7 +170,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="../assets/004c7f43d4.png" alt="בולד, תכנון פנסיוני ותכנון פרישה" class="footer-logo-img">
+        <img loading="lazy" decoding="async" src="../assets/004c7f43d4.png" alt="בולד, תכנון פנסיוני ותכנון פרישה" class="footer-logo-img">
         <p>ליאור נהרן, סוכן ביטוח פנסיוני עצמאי. תכנון פנסיוני ותכנון פרישה בליווי אישי, שקוף ומדויק.</p>
         <a class="footer-wa" href="https://wa.me/972502035552" target="_blank" rel="noopener">שלחו הודעה בוואטסאפ</a>
       </div>
@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hero = root.getAttribute("data-bold-chat") === "hero";
     root.className = "bchat" + (hero ? " bchat--hero" : "");
     root.innerHTML =
-      '<div class="bchat-top"><img alt="' + CONFIG.NAME + '" src="' + CONFIG.PHOTO + '"><div>' +
+      '<div class="bchat-top"><img loading="lazy" decoding="async" alt="' + CONFIG.NAME + '" src="' + CONFIG.PHOTO + '"><div>' +
       '<div class="bchat-name">' + CONFIG.NAME + '</div><div class="bchat-role">' + CONFIG.ROLE + '</div>' +
       '<div class="bchat-offer">פגישת תכנון ראשונית <b>ללא עלות</b></div></div></div>' +
       '<div class="bchat-log" role="log" aria-live="polite"></div><div class="bchat-reply"></div>' +

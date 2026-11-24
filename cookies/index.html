@@ -18,7 +18,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ראשי", "item": "https://www.bold.org.il/"}, {"@type": "ListItem", "position": 2, "name": "מדיניות עוגיות", "item": "https://www.bold.org.il/cookies/"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 
 
@@ -93,7 +93,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="../assets/004c7f43d4.png" alt="בולד, תכנון פנסיוני ותכנון פרישה" class="footer-logo-img">
+        <img loading="lazy" decoding="async" src="../assets/004c7f43d4.png" alt="בולד, תכנון פנסיוני ותכנון פרישה" class="footer-logo-img">
         <p>ליאור נהרן, סוכן ביטוח פנסיוני עצמאי. תכנון פנסיוני ותכנון פרישה בליווי אישי, שקוף ומדויק.</p>
         <a class="footer-wa" href="https://wa.me/972502035552" target="_blank" rel="noopener">שלחו הודעה בוואטסאפ</a>
       </div>
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hero = root.getAttribute("data-bold-chat") === "hero";
     root.className = "bchat" + (hero ? " bchat--hero" : "");
     root.innerHTML =
-      '<div class="bchat-top"><img alt="' + CONFIG.NAME + '" src="' + CONFIG.PHOTO + '"><div>' +
+      '<div class="bchat-top"><img loading="lazy" decoding="async" alt="' + CONFIG.NAME + '" src="' + CONFIG.PHOTO + '"><div>' +
       '<div class="bchat-name">' + CONFIG.NAME + '</div><div class="bchat-role">' + CONFIG.ROLE + '</div>' +
       '<div class="bchat-offer">פגישת תכנון ראשונית <b>ללא עלות</b></div></div></div>' +
       '<div class="bchat-log" role="log" aria-live="polite"></div><div class="bchat-reply"></div>' +
